@@ -14,4 +14,4 @@ func update_state(delta: float) -> void:
 
 func exit_state() -> void:
 	print("Exited Pause State")
-	game_manager.get_tree().paused = false
+	

@@ -24,5 +24,7 @@ func change_state(new_state: BaseGameState) -> void:
 func toggle_pause() -> void:
 	if current_state is PlayState:
 		change_state(PauseState.new(self))
+		print("toggle pause")
 	elif current_state is PauseState:
 		change_state(PlayState.new(self))
+		print("toggle play")

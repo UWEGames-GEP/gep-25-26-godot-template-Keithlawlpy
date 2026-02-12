@@ -1,4 +1,6 @@
-[gd_scene load_steps=4 format=3 uid="uid://d3kmcbk1mywun"]
+[gd_scene load_steps=5 format=3 uid="uid://d3kmcbk1mywun"]
+
+[ext_resource type="Script" uid="uid://wx33id6wjid0" path="res://GEP Core/Scripts/inventory/ItemObject.gd" id="1_wap1g"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_ng2fl"]
 
@@ -9,8 +11,10 @@ albedo_color = Color(4.33177e-06, 0.674902, 0.345375, 1)
 material = SubResource("StandardMaterial3D_wap1g")
 
 [node name="ball" type="Node3D"]
+script = ExtResource("1_wap1g")
 
 [node name="RigidBody3D" type="RigidBody3D" parent="."]
+gravity_scale = 0.0
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="RigidBody3D"]
 shape = SubResource("SphereShape3D_ng2fl")

@@ -128,6 +128,8 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0815773, -1.43051e-06, -19
 
 [node name="Ball" parent="GameManager" instance=ExtResource("10_3321n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.27722, 1.16396, -17.6096)
+item_name = "ball1"
 
 [node name="Ball2" parent="GameManager" instance=ExtResource("10_3321n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.870333, 0.829386, -14.9569)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.870333, 2.96118, -14.9569)
+item_name = "ball2"

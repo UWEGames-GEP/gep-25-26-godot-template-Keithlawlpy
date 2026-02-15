@@ -123,7 +123,7 @@ operation = 2
 size = Vector3(22, 10, 14)
 material = ExtResource("6_7xeo2")
 
-[node name="PlayerTemplate" parent="GameManager" instance=ExtResource("8_fimwp")]
+[node name="PlayerTemplate" parent="GameManager" groups=["player"] instance=ExtResource("8_fimwp")]
 process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0815773, -1.43051e-06, -19.6763)
 
@@ -133,5 +133,7 @@ game_manager = NodePath("../../../ball")
 
 [node name="ball" parent="." instance=ExtResource("10_3321n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.76397, 0.751286, -15.7564)
+rarity = 1
+item_name = "chicken1"
 
 [connection signal="body_entered" from="ball" to="GameManager" method="_on_ball_body_entered"]

@@ -16,7 +16,8 @@ enum RarityType {
 @export var item_name: String = ""
 
 func _ready():
-	body_entered.connect(_on_body_entered)
+	#body_entered.connect(_on_body_entered)
+	pass
 	
 func _process(delta):
 	rotate(Vector3.UP, 1.0 * delta)

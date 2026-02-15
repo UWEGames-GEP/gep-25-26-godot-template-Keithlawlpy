@@ -22,7 +22,6 @@ adjustment_enabled = true
 adjustment_saturation = 1.15
 
 [node name="Scene" type="Node3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0815773, -1.43051e-06, 0.163605)
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.892271, -0.274443, 0.358516, 2.02684e-08, 0.794054, 0.607847, -0.451501, 0.542364, -0.708511, 0, 2.76815, 9.26053)
@@ -129,11 +128,25 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0815773, -1.43051e-06, -19
 
 [node name="InventoryManager" type="Node3D" parent="GameManager/PlayerTemplate" node_paths=PackedStringArray("game_manager")]
 script = ExtResource("10_5ejyp")
-game_manager = NodePath("../../../ball")
+game_manager = NodePath("../../../collectable_items/Chicken2")
 
-[node name="ball" parent="." instance=ExtResource("10_3321n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.76397, 0.751286, -15.7564)
+[node name="collectable_items" type="Node" parent="."]
+
+[node name="Chicken" parent="collectable_items" instance=ExtResource("10_3321n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.71981, 0.283811, -16.6614)
+item_name = "Chicken"
+
+[node name="Chicken2" parent="collectable_items" instance=ExtResource("10_3321n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.78828, 0.939439, -14.4014)
 rarity = 1
-item_name = "chicken1"
+item_name = "chicken2"
 
-[connection signal="body_entered" from="ball" to="GameManager" method="_on_ball_body_entered"]
+[node name="Chicken3" parent="collectable_items" instance=ExtResource("10_3321n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.72059, 0.589319, -13.9761)
+item_name = "Chicken3"
+
+[node name="Chicken4" parent="collectable_items" instance=ExtResource("10_3321n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.90161, 5.29349, -4.28035)
+item_name = "Chicken4"
+
+[connection signal="body_entered" from="collectable_items/Chicken2" to="GameManager" method="_on_ball_body_entered"]

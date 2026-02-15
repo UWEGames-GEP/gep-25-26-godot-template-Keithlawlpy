@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://d3kmcbk1mywun"]
+
+[ext_resource type="Script" uid="uid://wx33id6wjid0" path="res://GEP Core/Scripts/inventory/ItemObject.gd" id="1_pg70d"]
+[ext_resource type="ArrayMesh" uid="uid://ch14s5w3n2duq" path="res://addons/chickenF_root/chickenF_root.obj" id="1_wap1g"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1jybp"]
+size = Vector3(1, 1.28821, 1)
+
+[node name="Chicken" type="Area3D"]
+script = ExtResource("1_pg70d")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.002, 0, 0, 0, 0.002, 0, 0, 0, 0.002, 0, 0, 0)
+mesh = ExtResource("1_wap1g")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.605353, 0)
+shape = SubResource("BoxShape3D_1jybp")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

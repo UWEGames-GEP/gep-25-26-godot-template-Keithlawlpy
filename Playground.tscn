@@ -10,7 +10,7 @@
 [ext_resource type="Material" uid="uid://cpk3jtowelhgh" path="res://addons/ThirdPersonTemplate/Environments/Materials/PingkGrid.material" id="7_xstjq"]
 [ext_resource type="PackedScene" uid="uid://c75s2m6eic1vo" path="res://addons/ThirdPersonTemplate/Character/Nodes/PlayerTemplate.tscn" id="8_fimwp"]
 [ext_resource type="Script" uid="uid://dfyf8ecjpop1h" path="res://GEP Core/Scripts/inventory/Inventory.gd" id="10_5ejyp"]
-[ext_resource type="PackedScene" uid="uid://d3kmcbk1mywun" path="res://GEP Core/collectable_ball.tscn" id="10_3321n"]
+[ext_resource type="PackedScene" uid="uid://d3kmcbk1mywun" path="res://GEP Core/collectable.tscn" id="10_3321n"]
 
 [sub_resource type="Environment" id="Environment_qyvd4"]
 background_mode = 2
@@ -127,15 +127,11 @@ material = ExtResource("6_7xeo2")
 process_mode = 1
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0815773, -1.43051e-06, -19.6763)
 
-[node name="InventoryManager" type="Node3D" parent="GameManager/PlayerTemplate"]
+[node name="InventoryManager" type="Node3D" parent="GameManager/PlayerTemplate" node_paths=PackedStringArray("game_manager")]
 script = ExtResource("10_5ejyp")
+game_manager = NodePath("../../../ball")
 
-[node name="Collectables" type="Node3D" parent="GameManager"]
+[node name="ball" parent="." instance=ExtResource("10_3321n")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.76397, 0.751286, -15.7564)
 
-[node name="Ball" parent="GameManager/Collectables" instance=ExtResource("10_3321n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.27722, 1.16396, -17.6096)
-item_name = "ball1"
-
-[node name="Ball2" parent="GameManager/Collectables" instance=ExtResource("10_3321n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.870333, 2.96118, -14.9569)
-item_name = "ball2"
+[connection signal="body_entered" from="ball" to="GameManager" method="_on_ball_body_entered"]

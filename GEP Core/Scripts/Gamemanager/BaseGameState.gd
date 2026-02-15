@@ -9,7 +9,7 @@ func _init(manager: Node) -> void:
 func enter_state() -> void:
 	pass
 
-func update_state(delta: float) -> void:
+func update_state(_delta: float) -> void:
 	pass
 
 func exit_state() -> void:

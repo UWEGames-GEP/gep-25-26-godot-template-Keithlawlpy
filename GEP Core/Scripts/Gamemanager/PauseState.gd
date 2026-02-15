@@ -7,7 +7,7 @@ func enter_state() -> void:
 	game_manager.get_tree().paused = true
 
 
-func update_state(delta: float) -> void:
+func update_state(_delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):
 		game_manager.toggle_pause()
 

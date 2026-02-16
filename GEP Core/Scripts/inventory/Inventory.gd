@@ -3,7 +3,8 @@ extends Node3D
 # ---- Game Manager ----
 @export var game_manager: Node
 
-@export var item_scenes: Dictionary = {"ball": preload("res://GEP Core/collectable.tscn")}
+@export var item_scenes: Dictionary = {"Chicken": preload("res://GEP Core/collectable.tscn"),
+"Chicken2": preload("res://GEP Core/collectable.tscn"), "Chicken3": preload("res://GEP Core/collectable.tscn"),"Chicken4": preload("res://GEP Core/collectable.tscn")}
 
 # ---- Inventory ----
 var items: Array[String] = []
@@ -15,7 +16,7 @@ func _ready() -> void:
 	game_manager = get_tree().get_first_node_in_group("game_manager")
 	collectable_items = get_tree().get_first_node_in_group("collectable_items")
 
-func _process(delta):
+func _process(_delta):
 	if Input.is_action_just_pressed("drop_object"):
 		print("item drop button pressed")
 		drop_item()

@@ -128,7 +128,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0815773, -1.43051e-06, -19
 
 [node name="InventoryManager" type="Node3D" parent="GameManager/PlayerTemplate" node_paths=PackedStringArray("game_manager")]
 script = ExtResource("10_5ejyp")
-game_manager = NodePath("../../../collectable_items/Chicken2")
+game_manager = NodePath("../..")
 
 [node name="collectable_items" type="Node" parent="."]
 

@@ -38,6 +38,11 @@ func drop_item():
 		return
 			
 	var dropped_item = scene.instantiate()
+	
+	# Assign the correct item data
+	if dropped_item is ItemObject:
+		dropped_item.item_name = id
+		
 		
 	#position infront of the player 
 	var player = get_parent()

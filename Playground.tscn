@@ -139,7 +139,7 @@ item_name = "Chicken"
 [node name="Chicken2" parent="collectable_items" instance=ExtResource("10_3321n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.78828, 0.939439, -14.4014)
 rarity = 1
-item_name = "chicken2"
+item_name = "Chicken2"
 
 [node name="Chicken3" parent="collectable_items" instance=ExtResource("10_3321n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.72059, 0.589319, -13.9761)

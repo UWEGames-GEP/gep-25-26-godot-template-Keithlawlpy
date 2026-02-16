@@ -41,8 +41,8 @@ func drop_item():
 		
 	#position infront of the player 
 	var player = get_parent()
-	dropped_item.global_transform.origin = player.global_transform.origin + player.global_transform.basis.z * -1.0
+	dropped_item.global_transform.origin = player.global_transform.origin + player.global_transform.basis.z * 2.0
 		
-	collectable_items.add_child(dropped_item)
+	get_tree().get_root().add_child(dropped_item)
 		
 	print("Dropped: ", id, "")

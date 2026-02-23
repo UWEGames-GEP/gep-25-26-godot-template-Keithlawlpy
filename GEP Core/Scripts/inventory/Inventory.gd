@@ -7,7 +7,7 @@ extends Node3D
 "Chicken2": preload("res://GEP Core/Objectnodes/collectable.tscn"), "Chicken3": preload("res://GEP Core/Objectnodes/collectable.tscn"),"Chicken4": preload("res://GEP Core/Objectnodes/collectable.tscn")}
 
 # ---- Inventory ----
-var items: Array[String] = []
+@export var items: Array[String] = []
 
 # ---- World Items Parent ----
 var collectable_items: Node3D
@@ -17,7 +17,7 @@ func _ready() -> void:
 	collectable_items = get_tree().get_first_node_in_group("collectable_items")
 
 func _process(_delta):
-	if Input.is_action_just_pressed("drop_object"):
+	if Input.is_action_just_pressed("dropObject"):
 		print("item drop button pressed")
 		drop_item()
 

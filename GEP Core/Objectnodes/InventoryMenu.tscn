@@ -1,4 +1,6 @@
-[gd_scene format=3 uid="uid://c81sb83fol1r1"]
+[gd_scene load_steps=2 format=3 uid="uid://c81sb83fol1r1"]
+
+[ext_resource type="Script" uid="uid://1nbj8ifdtfsg" path="res://GEP Core/Scripts/inventory/inventory_menu.gd" id="1_x32hr"]
 
 [node name="InventoryMenu" type="Control"]
 layout_mode = 3
@@ -8,17 +10,21 @@ anchor_bottom = 1.0
 offset_bottom = -8.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_x32hr")
 
-[node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+[node name="ColorRect" type="ColorRect" parent="."]
 offset_right = 1152.0
 offset_bottom = 640.0
 color = Color(0.407843, 0.407843, 0.407843, 0.466667)
 
-[node name="ItemList" type="ItemList" parent="CanvasLayer"]
-offset_right = 1152.0
-offset_bottom = 640.0
-select_mode = 1
-auto_width = true
-auto_height = true
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 128.0
+offset_top = 64.0
+offset_right = 1024.0
+offset_bottom = 576.0
+
+[node name="Button" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+text = "Button"
+
+[connection signal="ready" from="." to="." method="_on_ready"]

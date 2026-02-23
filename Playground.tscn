@@ -1,8 +1,9 @@
-[gd_scene load_steps=13 format=3 uid="uid://ci6vgup1ls47s"]
+[gd_scene load_steps=14 format=3 uid="uid://ci6vgup1ls47s"]
 
 [ext_resource type="Script" uid="uid://b822xiqyb4cum" path="res://GEP Core/Scripts/Gamemanager/GameManager.gd" id="2_3px5j"]
 [ext_resource type="Sky" uid="uid://cbbdl23q60wak" path="res://addons/ThirdPersonTemplate/Environments/SkyBox.res" id="2_vp21c"]
 [ext_resource type="Material" uid="uid://bly25nr0aqsv3" path="res://addons/ThirdPersonTemplate/Environments/Materials/BlueGrid.material" id="3_anjpt"]
+[ext_resource type="PackedScene" uid="uid://c81sb83fol1r1" path="res://GEP Core/Objectnodes/InventoryMenu.tscn" id="3_q63b2"]
 [ext_resource type="Material" uid="uid://c1u020xb37y6n" path="res://addons/ThirdPersonTemplate/Environments/Materials/Blue.material" id="3_ugxud"]
 [ext_resource type="Material" uid="uid://d3up41bo0vjj0" path="res://addons/ThirdPersonTemplate/Environments/Materials/OrangeGrid.material" id="4_kii6k"]
 [ext_resource type="Material" uid="uid://ddpgp1pyklffr" path="res://addons/ThirdPersonTemplate/Environments/Materials/GreenGrid.material" id="6_5rtke"]
@@ -33,6 +34,8 @@ environment = SubResource("Environment_qyvd4")
 [node name="GameManager" type="Node" parent="."]
 process_mode = 3
 script = ExtResource("2_3px5j")
+
+[node name="InventoryMenu" parent="GameManager" instance=ExtResource("3_q63b2")]
 
 [node name="Level" type="Node3D" parent="GameManager"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0815773, -1.43051e-06, 0.163605)
@@ -129,6 +132,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0815773, -1.43051e-06, -19
 [node name="InventoryManager" type="Node3D" parent="GameManager/PlayerTemplate" node_paths=PackedStringArray("game_manager")]
 script = ExtResource("10_5ejyp")
 game_manager = NodePath("../..")
+items = Array[String](["", "", "", "", "", ""])
 
 [node name="collectable_items" type="Node" parent="."]
 

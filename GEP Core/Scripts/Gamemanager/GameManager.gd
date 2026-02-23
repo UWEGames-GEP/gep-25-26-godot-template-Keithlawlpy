@@ -13,6 +13,13 @@ func _process(delta: float) -> void:
 	if current_state:
 		current_state.update_state(delta)
 
+	if Input.is_action_just_pressed("freecursor"):
+		if Input.mouse_mode == Input.MOUSE_MODE_CAPTURED:
+			Input.mouse_mode = Input.MOUSE_MODE_VISIBLE
+		else:
+			Input.mouse_mode = Input.MOUSE_MODE_CAPTURED		
+
+
 
 func change_state(new_state: BaseGameState) -> void:
 	if current_state:

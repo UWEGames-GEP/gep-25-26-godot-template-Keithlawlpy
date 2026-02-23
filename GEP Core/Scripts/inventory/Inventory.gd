@@ -3,8 +3,8 @@ extends Node3D
 # ---- Game Manager ----
 @export var game_manager: Node
 
-@export var item_scenes: Dictionary = {"Chicken": preload("res://GEP Core/collectable.tscn"),
-"Chicken2": preload("res://GEP Core/collectable.tscn"), "Chicken3": preload("res://GEP Core/collectable.tscn"),"Chicken4": preload("res://GEP Core/collectable.tscn")}
+@export var item_scenes: Dictionary = {"Chicken": preload("res://GEP Core/Objectnodes/collectable.tscn"),
+"Chicken2": preload("res://GEP Core/Objectnodes/collectable.tscn"), "Chicken3": preload("res://GEP Core/Objectnodes/collectable.tscn"),"Chicken4": preload("res://GEP Core/Objectnodes/collectable.tscn")}
 
 # ---- Inventory ----
 var items: Array[String] = []

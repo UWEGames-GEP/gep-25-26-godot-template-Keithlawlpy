@@ -10,7 +10,7 @@
 [ext_resource type="Material" uid="uid://cpk3jtowelhgh" path="res://addons/ThirdPersonTemplate/Environments/Materials/PingkGrid.material" id="7_xstjq"]
 [ext_resource type="PackedScene" uid="uid://c75s2m6eic1vo" path="res://addons/ThirdPersonTemplate/Character/Nodes/PlayerTemplate.tscn" id="8_fimwp"]
 [ext_resource type="Script" uid="uid://dfyf8ecjpop1h" path="res://GEP Core/Scripts/inventory/Inventory.gd" id="10_5ejyp"]
-[ext_resource type="PackedScene" uid="uid://d3kmcbk1mywun" path="res://GEP Core/collectable.tscn" id="10_3321n"]
+[ext_resource type="PackedScene" uid="uid://d3kmcbk1mywun" path="res://GEP Core/Objectnodes/collectable.tscn" id="10_3321n"]
 
 [sub_resource type="Environment" id="Environment_qyvd4"]
 background_mode = 2

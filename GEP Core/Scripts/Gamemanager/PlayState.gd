@@ -9,7 +9,7 @@ func enter_state() -> void:
 		game_manager.game_ui.visible = true
 		
 	game_manager.get_tree().paused = false
-
+	Input.mouse_mode = Input.MOUSE_MODE_CAPTURED	
 
 func update_state(_delta: float) -> void:
 	if Input.is_action_just_pressed("pause"):

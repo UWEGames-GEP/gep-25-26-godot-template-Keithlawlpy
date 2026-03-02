@@ -9,3 +9,11 @@ https://www.youtube.com/watch?v=_nEolccutWw
 
 This project also uses a character controller and camera script from this repository: 
 https://github.com/pemguin005/Third-Person-Controller--SoulsLIke-Godot4
+
+
+controls:
+	
+	Esc: pause
+	Q: Drop items 
+	E: open inventory
+	F: free cursor

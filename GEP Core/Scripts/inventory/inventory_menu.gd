@@ -6,7 +6,6 @@ extends Control
 var is_open = false
 
 func _ready():
-	##var items = preload("res://GEP Core/Scripts/inventory/Inventory.gd")
 	close()
 
 func _process(_delta):
@@ -31,7 +30,7 @@ func populate_inventory() -> void:
 	for child in v_box_container.get_children():
 		child.queue_free()
 		
-		# Get the inventory from the player
+	# Get the inventory from the player
 	var inventory = get_tree().get_first_node_in_group("player").get_node("InventoryManager")
 	
 	# One button per item in the array
@@ -40,9 +39,12 @@ func populate_inventory() -> void:
 		var btn = Button.new()
 		btn.text = item_name
 		btn.custom_minimum_size = Vector2(300, 50)
+		
 		# Pass the index so we know which item to drop
 		btn.pressed.connect(_on_item_button_pressed.bind(i))
 		v_box_container.add_child(btn)
+		
+		
 		
 func _on_item_button_pressed(index: int) -> void:
 	var inventory = get_tree().get_first_node_in_group("player").get_node("InventoryManager")

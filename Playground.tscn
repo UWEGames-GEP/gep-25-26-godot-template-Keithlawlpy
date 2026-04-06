@@ -35,7 +35,8 @@ environment = SubResource("Environment_qyvd4")
 process_mode = 3
 script = ExtResource("2_3px5j")
 
-[node name="InventoryMenu" parent="GameManager" instance=ExtResource("3_q63b2")]
+[node name="InventoryMenu" parent="GameManager" node_paths=PackedStringArray("game_manager") instance=ExtResource("3_q63b2")]
+game_manager = NodePath("..")
 
 [node name="Level" type="Node3D" parent="GameManager"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0815773, -1.43051e-06, 0.163605)

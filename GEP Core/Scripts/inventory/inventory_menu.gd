@@ -3,6 +3,7 @@ extends Control
 @onready var v_box_container: VBoxContainer = $VBoxContainer
 @onready var inventory_manager: Node3D = $"../PlayerTemplate/InventoryManager"
 
+@export var game_manager: Node 
 var is_open = false
 
 func _ready():
@@ -11,6 +12,7 @@ func _ready():
 func _process(_delta):
 	if Input.is_action_just_pressed("openInventoryMenu"):
 		print("opening inventory menu")
+		game_manager.toggle_pause()
 		if is_open:
 			close()
 		else:
